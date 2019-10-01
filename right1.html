@@ -6,6 +6,15 @@
 
 
 <style>
+a:link{
+text-decoration:none;
+
+font-size:100%;
+}
+
+.box img {width:100%;}
+
+  
 body{
 background-color:lightblue;
 }
@@ -16,44 +25,22 @@ background-color:lightblue;
 
 <body>
 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><img src="pc1.jpg" width="300" height="300" /> </td>
+    <td align="center"><img src="pc2.png" width="300" height="300" /></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="right1-1.html">檀香</a></td>
+    <td align="center"><a href="right1-2.html">無花果</a></td>
+  </tr>
+</table>
 
 
-<div id="demo">
-<button type="button" onclick="loadDoc()" style="width:100px;height:50px;font-size:20px;background-color:#FFBB73;border:none;font-family:fantasy;font-weight: 800;">
-檀香</button>
+<div class="demo">
 
-
-<button type="button" onclick="loadDoc1()" style="width:100px;height:50px;font-size:20px;background-color:#FFBB73;border:none;font-family:fantasy;font-weight: 800;">
-無花果</button>
+</td></td></tr>
 </div>
-
-<script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  }; 
-  xhttp.open("GET", "tree1.txt", true);
-  xhttp.send();
-}
-
-
-
-function loadDoc1() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  }; 
-  xhttp.open("GET", "tree2.txt", true);
-  xhttp.send();
-}
-</script>
 
 
 
