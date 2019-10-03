@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+  <head>
+<meta charset="UTF-8">
+<style>
+
+
+</style>
+  </head>
+
+
+
+
+
+  <body>
+
+	<h1 style="font-size:100px;color:green">猜拳遊戲</h1>
+    <button style="font-size:100px;background-color:red;color:white"  onclick="myFunction()" >點選我出拳</button>
+
+
+
+<script>
+function myFunction() {
+
+ var choice = parseInt(prompt("剪刀石頭布: 0是石頭；1是布 ; 2是剪刀",  0));
+  var comchoice = Math.floor(Math.random()*3);
+  	if(choice===0){
+    	if(comchoice===0){
+    	alert("你出石頭 對方也出石頭 平手!");
+       }else if(comchoice===1){
+    	alert("你出石頭 對方出布 你輸了!");
+       }else if(comchoice===2){
+    	alert("你出石頭 對方出剪刀 你贏了!");
+        }
+     }else if(choice===1){
+     	if(comchoice===0){
+    	alert("你出布 對方出石頭 你贏了!");
+       }else if(comchoice===1){
+    	alert("你出布 對方出布 平手");
+       }else if(comchoice===2){
+    	alert("你出布 對方出剪刀 你輸了");
+       }
+   
+     }else if(choice===2){
+	if(comchoice===0){
+    	alert("你出剪刀 對方出石頭 你輸了!");
+       }else if(comchoice===1){
+    	alert("你出剪刀 對方出布 你贏了");
+       }else if(comchoice===2){
+    	alert("你出剪刀 對方出剪刀 平手");
+       }
+    	
+     }
+  	
+}
+</script>    
+    
+    
+
+
+
+
+
+
+  </body>
+
+
+  
+</html>
