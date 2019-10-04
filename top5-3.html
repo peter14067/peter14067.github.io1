@@ -1,69 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+       
+        <meta charset="UTF-8">
 
-<!DOCTYPE html>
-  <head>
-<meta charset="UTF-8">
-<style>
+   </head>
+<body >
 
+<br><br>
+<p style="font-size:40px">猜拳遊戲</p>
+<button onclick="myFunction()" style="font-size:80px; background-color:red;color:white; border:3px orange double ">start</button>
 
-</style>
-  </head>
-
-
-
-
-
-  <body>
-
-	<h1 style="font-size:100px;color:green">猜拳遊戲</h1>
-    <button style="font-size:100px;background-color:red;color:white"  onclick="myFunction()" >點選我出拳</button>
-
-
+<div id="demo"></div>
 
 <script>
-function myFunction() {
 
- var choice = parseInt(prompt("剪刀石頭布: 0是石頭；1是布 ; 2是剪刀",  0));
-  var comchoice = Math.floor(Math.random()*3);
-  	if(choice===0){
-    	if(comchoice===0){
-    	alert("你出石頭 對方也出石頭 平手!");
-       }else if(comchoice===1){
-    	alert("你出石頭 對方出布 你輸了!");
-       }else if(comchoice===2){
-    	alert("你出石頭 對方出剪刀 你贏了!");
-        }
-     }else if(choice===1){
-     	if(comchoice===0){
-    	alert("你出布 對方出石頭 你贏了!");
-       }else if(comchoice===1){
-    	alert("你出布 對方出布 平手");
-       }else if(comchoice===2){
-    	alert("你出布 對方出剪刀 你輸了");
-       }
-   
-     }else if(choice===2){
-	if(comchoice===0){
-    	alert("你出剪刀 對方出石頭 你輸了!");
-       }else if(comchoice===1){
-    	alert("你出剪刀 對方出布 你贏了");
-       }else if(comchoice===2){
-    	alert("你出剪刀 對方出剪刀 平手");
-       }
-    	
-     }
-  	
+
+
+
+function myFunction(){
+var guesscom=Math.floor(Math.random()*3);
+var guess=parseInt(prompt("石頭是0,布是1,剪刀是2",0));
+
+if(guess===0){
+
+
+
+	if(guesscom===0){
+    alert("你出石頭 他出石頭 平手");
+    }else if(guesscom===1){
+    alert("你出石頭 他出布 你輸了");
+    }else if(guesscom===2){
+    alert("你出石頭 他出剪刀 你贏了");
+    }
+
+
 }
-</script>    
-    
-    
+
+}
+</script>
 
 
 
+</body>
 
 
-
-  </body>
-
-
-  
 </html>

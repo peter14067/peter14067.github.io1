@@ -6,44 +6,52 @@
 
    </head>
 <body >
+<p style="font-size:60px">請輸入一個整數(範圍1~100):</p> 
 
-<p style="font-size:60px">請輸入一個整數(範圍1~100):</p> <input type="text" id="inputText" style="font-size:30px; text-align:center"> 
-<button style="font-size:30px" onclick="myFunction()">猜數字</button>
 <br><br>
 
+<input type="text" id="inputext" style="font-size:30px; text-align:center">
+<button style="font-size:30px" onclick="myFunction()">猜數字</button>
+
 <div id="demo" style="font-size:40px"></div>
-
 <script>
- 
-var num=Math.floor(Math.random()*100+1);
+var x=document.getElementById("inputext");
+
+var y=Math.floor(Math.random()*100+1);
+var count=0;
 function myFunction(){
+var num=y;
+var value=x.value;
 
 
-var text=document.getElementById("inputText");
-var value=text.value;
-var guest="";
-if(value<1 || value>100){
-	document.getElementById("demo").innerHTML="";
-	alert("請輸入數字範圍1~100");
-   	}else if(value<num){
-	
-	guest=guest+value;
+  if(value>0 && value<101){
+  	
+  		if(value>num){
+     	
+            count++;
+        	alert("在小一點 ");
+            
+        }else if(value<num){
+        	
+             count++;
+          
+        	alert("在大一點 ");
+        }else if(value==num){
+        	
+      
+        	alert("恭喜答對了!");
+        }
+  	
+    }else{
+    alert("請輸入範圍1~100!");
+    	
+    }
+  
+  
+	document.getElementById("demo").innerHTML="失敗次數: "+count;
 
-	document.getElementById("demo").innerHTML="你所猜測的數字:  "+guest+"<br>  數字太小";
-	document.getElementById("demo").style.color = "red";
-	}else if(value>num){
-	guest=guest+value;
-	document.getElementById("demo").innerHTML="你所猜測的數字:  "+guest+"<br>  數字太大";
-	document.getElementById("demo").style.color = "red";
-	}else if(value==num){
-	guest=guest+value;
 
-	document.getElementById("demo").innerHTML="你所猜測的數字:  "+guest;
-	document.getElementById("demo").style.color = "blue";
-	alert("恭喜答對了");
-	}
 
-	
 }
 
 </script>
